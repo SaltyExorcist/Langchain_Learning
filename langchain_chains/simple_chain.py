@@ -17,9 +17,10 @@ prompt = PromptTemplate(
 llm = HuggingFacePipeline.from_model_id(
     model_id='google/gemma-2-2b-it',
     task='text-generation',
+    device=0,
     pipeline_kwargs=dict(
         temperature=0.5,
-        max_new_tokens=100
+        max_new_tokens=500
     ) 
 )
 
